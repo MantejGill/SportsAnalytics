@@ -1,0 +1,42 @@
+{
+  "fifa_regulations": {
+    "min_contract_years": 1,
+    "max_contract_years": 5,
+    "max_release_clause_multiplier": 10,
+    "max_signing_bonus_pct": 25,
+    "max_image_rights_pct": 50,
+    "max_performance_bonus_pct": 30,
+    "min_player_age": 16,
+    "max_player_age": 45
+  },
+  "league_specific": {
+    "premier_league": {
+      "max_contract_years": 5,
+      "homegrown_quota": 8,
+      "salary_cap": null,
+      "currency": "GBP"
+    },
+    "la_liga": {
+      "max_contract_years": 5,
+      "salary_cap_enforced": true,
+      "currency": "EUR"
+    },
+    "bundesliga": {
+      "max_contract_years": 5,
+      "50_plus_1_rule": true,
+      "currency": "EUR"
+    },
+    "serie_a": {
+      "max_contract_years": 5,
+      "currency": "EUR"
+    },
+    "ligue_1": {
+      "max_contract_years": 5,
+      "currency": "EUR"
+    }
+  },
+  "transfer_windows": {
+    "summer": {"start": "June 10", "end": "September 1"},
+    "winter": {"start": "January 1", "end": "January 31"}
+  }
+}

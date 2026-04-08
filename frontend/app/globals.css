@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide CopilotKit branding text (NOT the container - it holds the input!) */
+.poweredBy {
+  display: none !important;
+}
+.copilotKitBanner {
+  display: none !important;
+}
+/* Hide CopilotKit web inspector (version banner tooltip) */
+cpk-web-inspector {
+  display: none !important;
+}
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 210 50% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 14%;
+    --primary: 235 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 33% 96%;
+    --secondary-foreground: 210 50% 14%;
+    --muted: 210 33% 96%;
+    --muted-foreground: 215 19% 35%;
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 50% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 235 70% 60%;
+    --radius: 0.5rem;
+
+    /* Negotiate custom colors */
+    --negotiate-club: 217 91% 60%;
+    --negotiate-player: 142 76% 45%;
+    --negotiate-success: 163 61% 54%;
+    --negotiate-warning: 45 93% 47%;
+    --negotiate-danger: 0 84% 60%;
+
+    /* Agent status colors */
+    --agent-idle: 215 16% 47%;
+    --agent-active: 235 70% 60%;
+    --agent-complete: 163 61% 54%;
+    --agent-error: 0 84% 60%;
+
+    /* CopilotKit variable overrides - light mode */
+    --copilot-kit-primary-color: hsl(235 70% 60%);
+    --copilot-kit-background-color: hsl(210 33% 98%);
+    --copilot-kit-secondary-color: hsl(210 33% 96%);
+    --copilot-kit-separator-color: hsl(214 32% 91%);
+    --copilot-kit-response-button-background-color: hsl(210 33% 96%);
+    --copilot-kit-response-button-color: hsl(210 50% 14%);
+  }
+
+  .dark {
+    --background: 214 53% 9%;
+    --foreground: 210 28% 93%;
+    --card: 211 51% 15%;
+    --card-foreground: 210 28% 93%;
+    --popover: 211 51% 15%;
+    --popover-foreground: 210 28% 93%;
+    --primary: 235 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 212 53% 13%;
+    --secondary-foreground: 210 28% 88%;
+    --muted: 212 30% 20%;
+    --muted-foreground: 214 18% 70%;
+    --accent: 190 100% 50%;
+    --accent-foreground: 214 53% 9%;
+    --destructive: 358 100% 68%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 34% 26%;
+    --input: 213 34% 26%;
+    --ring: 235 70% 65%;
+    --radius: 0.5rem;
+
+    /* Negotiate custom colors - dark mode */
+    --negotiate-club: 217 91% 60%;
+    --negotiate-player: 142 76% 45%;
+    --negotiate-success: 163 61% 54%;
+    --negotiate-warning: 45 93% 47%;
+    --negotiate-danger: 0 84% 60%;
+
+    /* Agent status colors - dark mode */
+    --agent-idle: 214 18% 70%;
+    --agent-active: 235 70% 65%;
+    --agent-complete: 163 61% 54%;
+    --agent-error: 358 100% 68%;
+
+    /* CopilotKit variable overrides */
+    --copilot-kit-primary-color: hsl(235 70% 65%);
+    --copilot-kit-background-color: hsl(214 53% 9%);
+    --copilot-kit-secondary-color: hsl(212 53% 13%);
+    --copilot-kit-separator-color: hsl(213 34% 26%);
+    --copilot-kit-response-button-background-color: hsl(212 53% 13%);
+    --copilot-kit-response-button-color: hsl(210 28% 93%);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .slide-in {
+    animation: slide-in 0.3s ease-out;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Thin custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(107, 114, 128, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(107, 114, 128, 0.5); }
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.3) transparent;
+}
+
+/* Premium ambient background - light mode */
+.dashboard-ambient {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(120% 80% at 20% 0%, rgba(14, 165, 233, 0.14), transparent 55%),
+    radial-gradient(120% 80% at 80% 10%, rgba(99, 91, 255, 0.10), transparent 60%),
+    linear-gradient(180deg, rgba(239, 246, 255, 0.9) 0%, rgba(255, 255, 255, 0.96) 45%, rgba(246, 249, 252, 1) 100%);
+}
+.dark .dashboard-ambient {
+  background-image:
+    radial-gradient(120% 80% at 20% 0%, rgba(110, 123, 255, 0.16), transparent 55%),
+    radial-gradient(120% 80% at 80% 10%, rgba(0, 212, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(19, 38, 58, 0.6) 0%, rgba(11, 22, 36, 0.92) 100%);
+}
+
+/* Glass card effect - light mode */
+.glass-card {
+  backdrop-filter: blur(18px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(246,249,252,0.99) 100%);
+  border: 1px solid rgba(99, 91, 255, 0.18);
+  box-shadow: 0 2px 8px rgba(10, 37, 64, 0.08), 0 4px 16px rgba(10, 37, 64, 0.06);
+  color: hsl(210 50% 14%);
+}
+.glass-card h3, .glass-card p, .glass-card span, .glass-card div {
+  color: inherit;
+}
+.dark .glass-card {
+  background: linear-gradient(180deg, rgba(15,23,42,0.97) 0%, rgba(10,18,36,0.98) 100%);
+  border: 1px solid rgba(110, 123, 255, 0.18);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+  color: hsl(210 28% 93%);
+}
+
+/* Score pulse glow */
+@keyframes score-pulse {
+  0%, 100% { filter: drop-shadow(0 0 15px rgba(99, 91, 255, 0.2)); }
+  50% { filter: drop-shadow(0 0 25px rgba(99, 91, 255, 0.35)); }
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Glow breathing for active elements */
+@keyframes glow-breathe {
+  0%, 100% { box-shadow: 0 0 8px rgba(110, 123, 255, 0.5), 0 0 24px rgba(110, 123, 255, 0.3); }
+  50% { box-shadow: 0 0 12px rgba(110, 123, 255, 0.7), 0 0 32px rgba(110, 123, 255, 0.45); }
+}
+
+/* Moving border for active agent cards */
+@keyframes border-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.agent-active-border {
+  position: relative;
+}
+.agent-active-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6E7BFF, #00D4FF, #41D1A7, #6E7BFF);
+  background-size: 200% 100%;
+  animation: border-flow 3s linear infinite;
+  z-index: -1;
+}
+
+/* Dot grid subtle background pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(99, 91, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Card hover lift */
+.card-hover-lift {
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+.card-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(10, 37, 64, 0.08), 0 8px 24px rgba(10, 37, 64, 0.06), 0 0 20px rgba(0, 212, 255, 0.08);
+}
+
+/* Premium gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6E7BFF 0%, #00D4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium button */
+.btn-premium {
+  background: linear-gradient(135deg, #6E7BFF 0%, #5E6CFF 100%);
+  transition: all 0.2s ease;
+}
+.btn-premium:hover {
+  background: linear-gradient(135deg, #5E6CFF 0%, #4F5CFF 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(110, 123, 255, 0.4);
+}

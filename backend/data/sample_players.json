@@ -1,0 +1,1462 @@
+{
+  "data_version": "2025-04",
+  "sources": {
+    "transfermarkt": "https://www.transfermarkt.us/",
+    "spotrac": "https://www.spotrac.com/epl/",
+    "capology": "https://www.capology.com/",
+    "notes": "Market values from Transfermarkt (2025). Salaries from Spotrac/Capology (2024-25 season). All figures in EUR."
+  },
+  "players": [
+    {
+      "name": "Bukayo Saka",
+      "age": 23,
+      "position": "RW",
+      "current_club": "Arsenal",
+      "nationality": "England",
+      "stats": {
+        "goals": 16,
+        "assists": 12,
+        "appearances": 38,
+        "minutes_played": 3200,
+        "pass_completion_pct": 82.5,
+        "dribbles_per_90": 3.1,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2031",
+        "signed": "2024",
+        "length_years": 7,
+        "weekly_wage_gbp": 300000,
+        "annual_salary_eur": 18200000,
+        "source": "Arsenal Insider / Spotrac (2024)",
+        "source_url": "https://www.spotrac.com/epl/player/_/id/48801/bukayo-saka"
+      },
+      "market_context": {
+        "predicted_value_eur": 130000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 100000000,
+        "median_eur": 120000000,
+        "p75_eur": 150000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 15000000,
+          "high_eur": 20000000,
+          "basis": "Based on comparable Premier League wingers aged 21-25 (Foden, Martinelli, Sancho) from Spotrac/Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Jadon Sancho",
+            "salary_eur": 11000000,
+            "annual_salary_gbp": 9100000,
+            "weekly_wage_gbp": 175000,
+            "age_at_signing": 21,
+            "club": "Manchester United",
+            "transfer_fee_eur": 85000000,
+            "year": 2021,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/73226/jadon-sancho"
+          },
+          {
+            "name": "Phil Foden",
+            "salary_eur": 13600000,
+            "annual_salary_gbp": 11700000,
+            "weekly_wage_gbp": 225000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "transfer_fee_eur": 0,
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/24710/phil-foden"
+          },
+          {
+            "name": "Vinicius Jr",
+            "salary_eur": 20000000,
+            "weekly_wage_eur": 384000,
+            "age_at_signing": 24,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 0,
+            "year": 2025,
+            "release_clause_eur": 1000000000,
+            "source": "Capology / Madrid Universal",
+            "source_url": "https://www.capology.com/player/vinicius-junior-36719/"
+          },
+          {
+            "name": "Gabriel Martinelli",
+            "salary_eur": 10800000,
+            "weekly_wage_gbp": 180000,
+            "age_at_signing": 22,
+            "club": "Arsenal",
+            "year": 2023,
+            "source": "GiveMeSport",
+            "source_url": "https://www.givemesport.com/20-highest-paid-wingers-in-the-premier-league-2024/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Erling Haaland",
+      "age": 25,
+      "position": "ST",
+      "current_club": "Manchester City",
+      "nationality": "Norway",
+      "stats": {
+        "goals": 36,
+        "assists": 8,
+        "appearances": 35,
+        "minutes_played": 2900,
+        "pass_completion_pct": 73.2,
+        "dribbles_per_90": 1.4,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2034",
+        "signed": "2025-01",
+        "length_years": 10,
+        "weekly_wage_gbp": 525000,
+        "annual_salary_eur": 35000000,
+        "annual_bonuses_eur": 13000000,
+        "total_contract_value_usd": 273000000,
+        "source": "CBS Sports / Spotrac (Jan 2025)",
+        "source_url": "https://www.cbssports.com/soccer/news/erling-haaland-manchester-city-contract-details-610000-a-week-wages-release-clauses-removed-in-record-deal/"
+      },
+      "market_context": {
+        "predicted_value_eur": 200000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 150000000,
+        "median_eur": 180000000,
+        "p75_eur": 220000000,
+        "salary_range": {
+          "low_eur": 20000000,
+          "mid_eur": 30000000,
+          "high_eur": 40000000,
+          "basis": "Based on elite strikers market (Mbappe, Osimhen, Kane) from Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Kylian Mbappe",
+            "salary_eur": 31300000,
+            "weekly_wage_eur": 600000,
+            "age_at_signing": 25,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 0,
+            "year": 2024,
+            "signing_bonus_eur": 150000000,
+            "source": "beIN Sports / Capology",
+            "source_url": "https://www.capology.com/player/kylian-mbappe-36149/"
+          },
+          {
+            "name": "Harry Kane",
+            "salary_eur": 25000000,
+            "age_at_signing": 30,
+            "club": "Bayern Munich",
+            "transfer_fee_eur": 100000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Victor Osimhen",
+            "salary_eur": 12000000,
+            "age_at_signing": 25,
+            "club": "Napoli",
+            "transfer_fee_eur": 0,
+            "year": 2024,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pedri",
+      "age": 22,
+      "position": "CM",
+      "current_club": "Barcelona",
+      "nationality": "Spain",
+      "stats": {
+        "goals": 5,
+        "assists": 7,
+        "appearances": 32,
+        "minutes_played": 2600,
+        "pass_completion_pct": 91.3,
+        "dribbles_per_90": 1.8,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2030",
+        "signed": "2025-01",
+        "length_years": 5.5,
+        "annual_salary_eur": 12500000,
+        "total_contract_value_eur": 67700000,
+        "release_clause_eur": 1000000000,
+        "source": "Capology / Goal.com (Jan 2025)",
+        "source_url": "https://www.capology.com/player/pedri-37585/"
+      },
+      "market_context": {
+        "predicted_value_eur": 140000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 100000000,
+        "median_eur": 125000000,
+        "p75_eur": 155000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 12000000,
+          "high_eur": 18000000,
+          "basis": "Based on top La Liga/PL midfielders aged 20-25 (Bellingham, Foden, Pedri) from Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 14000000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Phil Foden",
+            "salary_eur": 13600000,
+            "weekly_wage_gbp": 225000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/24710/phil-foden"
+          },
+          {
+            "name": "Gavi",
+            "salary_eur": 6000000,
+            "age_at_signing": 18,
+            "club": "Barcelona",
+            "release_clause_eur": 1000000000,
+            "year": 2022,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kylian Mbappe",
+      "age": 26,
+      "position": "LW",
+      "current_club": "Real Madrid",
+      "nationality": "France",
+      "stats": {
+        "goals": 27,
+        "assists": 10,
+        "appearances": 34,
+        "minutes_played": 2800,
+        "pass_completion_pct": 78.1,
+        "dribbles_per_90": 4.2,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2029",
+        "signed": "2024-07",
+        "length_years": 5,
+        "annual_salary_eur": 31300000,
+        "weekly_wage_eur": 600000,
+        "signing_bonus_eur": 150000000,
+        "total_package_eur": 61250000,
+        "source": "beIN Sports / Sportico (2024)",
+        "source_url": "https://www.beinsports.com/en-us/soccer/articles-video/erling-haaland-s-staggering-salary-revealed-after-extending-until-2034-2025-01-17"
+      },
+      "market_context": {
+        "predicted_value_eur": 200000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 150000000,
+        "median_eur": 180000000,
+        "p75_eur": 220000000,
+        "salary_range": {
+          "low_eur": 20000000,
+          "mid_eur": 30000000,
+          "high_eur": 40000000,
+          "basis": "Based on elite forward market (Haaland, Vinicius Jr, Salah) from Capology/Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Erling Haaland",
+            "salary_eur": 35000000,
+            "weekly_wage_gbp": 525000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2025,
+            "source": "CBS Sports",
+            "source_url": "https://www.cbssports.com/soccer/news/erling-haaland-manchester-city-contract-details-610000-a-week-wages-release-clauses-removed-in-record-deal/"
+          },
+          {
+            "name": "Vinicius Jr",
+            "salary_eur": 20000000,
+            "age_at_signing": 24,
+            "club": "Real Madrid",
+            "year": 2025,
+            "release_clause_eur": 1000000000,
+            "source": "Madrid Universal",
+            "source_url": "https://madriduniversal.com/complete-details-of-vinicius-new-real-madrid-contract-including-salary-and-bonuses/"
+          },
+          {
+            "name": "Mohamed Salah",
+            "salary_eur": 24200000,
+            "weekly_wage_gbp": 400000,
+            "age_at_signing": 33,
+            "club": "Liverpool",
+            "year": 2025,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/15507/mohamed-salah"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mohamed Salah",
+      "age": 33,
+      "position": "RW",
+      "current_club": "Liverpool",
+      "nationality": "Egypt",
+      "stats": {
+        "goals": 18,
+        "assists": 10,
+        "appearances": 32,
+        "minutes_played": 2700,
+        "pass_completion_pct": 77.8,
+        "dribbles_per_90": 2.6,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2027",
+        "signed": "2025",
+        "length_years": 2,
+        "weekly_wage_gbp": 400000,
+        "annual_salary_eur": 24200000,
+        "annual_bonuses_eur": 6000000,
+        "total_contract_value_gbp": 52000000,
+        "source": "Spotrac / Liverpool.com (2025)",
+        "source_url": "https://www.spotrac.com/epl/player/_/id/15507/mohamed-salah",
+        "notes": "Salah announced departure from Liverpool at end of 2025-26 season"
+      },
+      "market_context": {
+        "predicted_value_eur": 55000000,
+        "transfer_value_source": "Transfermarkt (2025, age-adjusted)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 35000000,
+        "median_eur": 48000000,
+        "p75_eur": 65000000,
+        "salary_range": {
+          "low_eur": 15000000,
+          "mid_eur": 22000000,
+          "high_eur": 30000000,
+          "basis": "Based on veteran elite forwards 30+ (De Bruyne, Benzema, Lewandowski) from Capology 2024-25 data. Premium reflects elite production despite age."
+        },
+        "comparables": [
+          {
+            "name": "Kevin De Bruyne",
+            "salary_eur": 20500000,
+            "weekly_wage_gbp": 400000,
+            "age_at_signing": 30,
+            "club": "Manchester City",
+            "year": 2021,
+            "source": "Spotrac / Capology",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/20920/kevin-de-bruyne"
+          },
+          {
+            "name": "Robert Lewandowski",
+            "salary_eur": 18000000,
+            "age_at_signing": 34,
+            "club": "Barcelona",
+            "transfer_fee_eur": 45000000,
+            "year": 2022,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Heung-Min Son",
+            "salary_eur": 12500000,
+            "weekly_wage_gbp": 190000,
+            "age_at_signing": 31,
+            "club": "Tottenham",
+            "year": 2023,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jude Bellingham",
+      "age": 21,
+      "position": "CM",
+      "current_club": "Real Madrid",
+      "nationality": "England",
+      "stats": {
+        "goals": 19,
+        "assists": 6,
+        "appearances": 36,
+        "minutes_played": 3000,
+        "pass_completion_pct": 88.5,
+        "dribbles_per_90": 2.4,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2029",
+        "signed": "2023",
+        "length_years": 6,
+        "annual_salary_eur": 20800000,
+        "transfer_fee_eur": 103000000,
+        "source": "Capology (2025)",
+        "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+      },
+      "market_context": {
+        "predicted_value_eur": 160000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 120000000,
+        "median_eur": 145000000,
+        "p75_eur": 175000000,
+        "salary_range": {
+          "low_eur": 14000000,
+          "mid_eur": 20000000,
+          "high_eur": 28000000,
+          "basis": "Based on elite young midfielders aged 20-23 (Pedri, Foden, Wirtz) from Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Pedri",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Barcelona",
+            "year": 2025,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/pedri-37585/"
+          },
+          {
+            "name": "Phil Foden",
+            "salary_eur": 13600000,
+            "weekly_wage_gbp": 225000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/24710/phil-foden"
+          },
+          {
+            "name": "Florian Wirtz",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Liverpool",
+            "transfer_fee_eur": 125000000,
+            "year": 2025,
+            "source": "Liverpool.com / Get German Football News",
+            "source_url": "https://www.liverpool.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lamine Yamal",
+      "age": 18,
+      "position": "RW",
+      "current_club": "Barcelona",
+      "nationality": "Spain",
+      "stats": {
+        "goals": 7,
+        "assists": 10,
+        "appearances": 37,
+        "minutes_played": 2800,
+        "pass_completion_pct": 80.2,
+        "dribbles_per_90": 4.5,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2031",
+        "signed": "2024",
+        "length_years": 7,
+        "annual_salary_eur": 16600000,
+        "release_clause_eur": 1000000000,
+        "source": "Capology / beIN Sports (2025)",
+        "source_url": "https://www.capology.com/player/lamine-yamal/"
+      },
+      "market_context": {
+        "predicted_value_eur": 200000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 140000000,
+        "median_eur": 175000000,
+        "p75_eur": 220000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 16000000,
+          "high_eur": 24000000,
+          "basis": "Based on elite teenage/young wingers (Saka, Foden at same age bracket) from Capology/Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Bukayo Saka",
+            "salary_eur": 18200000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 23,
+            "club": "Arsenal",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/48801/bukayo-saka"
+          },
+          {
+            "name": "Phil Foden",
+            "salary_eur": 13600000,
+            "weekly_wage_gbp": 225000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/24710/phil-foden"
+          },
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Declan Rice",
+      "age": 26,
+      "position": "CM",
+      "current_club": "Arsenal",
+      "nationality": "England",
+      "stats": {
+        "goals": 7,
+        "assists": 8,
+        "appearances": 38,
+        "minutes_played": 3350,
+        "pass_completion_pct": 90.1,
+        "dribbles_per_90": 1.5,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2028",
+        "signed": "2023",
+        "length_years": 5,
+        "weekly_wage_gbp": 240000,
+        "annual_salary_eur": 14500000,
+        "transfer_fee_eur": 116600000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/player/_/id/56041/declan-rice"
+      },
+      "market_context": {
+        "predicted_value_eur": 110000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 80000000,
+        "median_eur": 100000000,
+        "p75_eur": 125000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 14000000,
+          "high_eur": 20000000,
+          "basis": "Based on elite PL midfielders aged 24-28 (Rodri, Bellingham, Odegaard) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Rodri",
+            "salary_eur": 13200000,
+            "weekly_wage_gbp": 220000,
+            "age_at_signing": 27,
+            "club": "Manchester City",
+            "year": 2023,
+            "source": "Capology / Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          },
+          {
+            "name": "Martin Odegaard",
+            "salary_eur": 14500000,
+            "weekly_wage_gbp": 240000,
+            "age_at_signing": 25,
+            "club": "Arsenal",
+            "year": 2023,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Florian Wirtz",
+      "age": 22,
+      "position": "CAM",
+      "current_club": "Liverpool",
+      "nationality": "Germany",
+      "stats": {
+        "goals": 18,
+        "assists": 12,
+        "appearances": 34,
+        "minutes_played": 2900,
+        "pass_completion_pct": 86.7,
+        "dribbles_per_90": 3.2,
+        "season": "2024-25"
+      },
+      "contract": {
+        "expiry": "2030",
+        "signed": "2025",
+        "length_years": 5,
+        "weekly_wage_gbp": 200000,
+        "annual_salary_eur": 12500000,
+        "transfer_fee_eur": 125000000,
+        "source": "Liverpool.com / Get German Football News (2025)",
+        "source_url": "https://www.liverpool.com/"
+      },
+      "market_context": {
+        "predicted_value_eur": 125000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 90000000,
+        "median_eur": 110000000,
+        "p75_eur": 140000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 12000000,
+          "high_eur": 18000000,
+          "basis": "Based on elite young attacking midfielders aged 20-24 (Bellingham, Palmer, Pedri) from Capology/Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          },
+          {
+            "name": "Cole Palmer",
+            "salary_eur": 7800000,
+            "weekly_wage_gbp": 130000,
+            "age_at_signing": 21,
+            "club": "Chelsea",
+            "transfer_fee_eur": 47000000,
+            "year": 2023,
+            "source": "Spotrac / Capology",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Pedri",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Barcelona",
+            "year": 2025,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/pedri-37585/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cole Palmer",
+      "age": 23,
+      "position": "RW",
+      "current_club": "Chelsea",
+      "nationality": "England",
+      "stats": {
+        "goals": 22,
+        "assists": 11,
+        "appearances": 34,
+        "minutes_played": 2850,
+        "pass_completion_pct": 81.3,
+        "dribbles_per_90": 2.8,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2033",
+        "signed": "2024",
+        "length_years": 9,
+        "weekly_wage_gbp": 130000,
+        "annual_salary_eur": 7800000,
+        "source": "Spotrac / Capology (2024)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 120000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 85000000,
+        "median_eur": 105000000,
+        "p75_eur": 135000000,
+        "salary_range": {
+          "low_eur": 7000000,
+          "mid_eur": 12000000,
+          "high_eur": 18000000,
+          "basis": "Based on elite PL wingers/attackers aged 21-25 (Saka, Foden, Yamal) from Spotrac/Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Bukayo Saka",
+            "salary_eur": 18200000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 23,
+            "club": "Arsenal",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/48801/bukayo-saka"
+          },
+          {
+            "name": "Phil Foden",
+            "salary_eur": 13600000,
+            "weekly_wage_gbp": 225000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/24710/phil-foden"
+          },
+          {
+            "name": "Lamine Yamal",
+            "salary_eur": 16600000,
+            "age_at_signing": 18,
+            "club": "Barcelona",
+            "release_clause_eur": 1000000000,
+            "year": 2024,
+            "source": "Capology / beIN Sports",
+            "source_url": "https://www.capology.com/player/lamine-yamal/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "William Saliba",
+      "age": 24,
+      "position": "CB",
+      "current_club": "Arsenal",
+      "nationality": "France",
+      "stats": {
+        "goals": 2,
+        "assists": 1,
+        "appearances": 36,
+        "minutes_played": 3200,
+        "pass_completion_pct": 92.4,
+        "dribbles_per_90": 0.4,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2029",
+        "signed": "2024",
+        "length_years": 5,
+        "weekly_wage_gbp": 250000,
+        "annual_salary_eur": 15000000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 90000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 65000000,
+        "median_eur": 80000000,
+        "p75_eur": 100000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 13000000,
+          "high_eur": 18000000,
+          "basis": "Based on elite PL centre-backs aged 22-27 (Dias, Van Dijk, Kounde) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Ruben Dias",
+            "salary_eur": 11400000,
+            "weekly_wage_gbp": 220000,
+            "age_at_signing": 23,
+            "club": "Manchester City",
+            "transfer_fee_eur": 68000000,
+            "year": 2020,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Virgil van Dijk",
+            "salary_eur": 18000000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 27,
+            "club": "Liverpool",
+            "transfer_fee_eur": 84700000,
+            "year": 2018,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Jules Kounde",
+            "salary_eur": 10000000,
+            "age_at_signing": 24,
+            "club": "Barcelona",
+            "transfer_fee_eur": 50000000,
+            "year": 2022,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rodri",
+      "age": 28,
+      "position": "CDM",
+      "current_club": "Manchester City",
+      "nationality": "Spain",
+      "stats": {
+        "goals": 9,
+        "assists": 10,
+        "appearances": 34,
+        "minutes_played": 3050,
+        "pass_completion_pct": 93.0,
+        "dribbles_per_90": 1.1,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2027",
+        "signed": "2023",
+        "length_years": 4,
+        "weekly_wage_gbp": 220000,
+        "annual_salary_eur": 13200000,
+        "notes": "Ballon d'Or 2024 winner",
+        "source": "Capology / Spotrac (2025)",
+        "source_url": "https://www.capology.com/"
+      },
+      "market_context": {
+        "predicted_value_eur": 130000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 95000000,
+        "median_eur": 115000000,
+        "p75_eur": 145000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 15000000,
+          "high_eur": 22000000,
+          "basis": "Based on elite CDM/CM market (Rice, Bellingham, Casemiro) from Capology/Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Declan Rice",
+            "salary_eur": 14500000,
+            "weekly_wage_gbp": 240000,
+            "age_at_signing": 24,
+            "club": "Arsenal",
+            "transfer_fee_eur": 116600000,
+            "year": 2023,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/56041/declan-rice"
+          },
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          },
+          {
+            "name": "Casemiro",
+            "salary_eur": 18000000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 30,
+            "club": "Manchester United",
+            "transfer_fee_eur": 70000000,
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Martin Odegaard",
+      "age": 26,
+      "position": "CAM",
+      "current_club": "Arsenal",
+      "nationality": "Norway",
+      "stats": {
+        "goals": 8,
+        "assists": 11,
+        "appearances": 35,
+        "minutes_played": 2900,
+        "pass_completion_pct": 87.5,
+        "dribbles_per_90": 2.1,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2028",
+        "signed": "2023",
+        "length_years": 5,
+        "weekly_wage_gbp": 240000,
+        "annual_salary_eur": 14500000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 100000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 75000000,
+        "median_eur": 90000000,
+        "p75_eur": 115000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 14000000,
+          "high_eur": 20000000,
+          "basis": "Based on elite PL attacking midfielders aged 24-28 (Wirtz, Bellingham, De Bruyne) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Florian Wirtz",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Liverpool",
+            "transfer_fee_eur": 125000000,
+            "year": 2025,
+            "source": "Liverpool.com",
+            "source_url": "https://www.liverpool.com/"
+          },
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          },
+          {
+            "name": "Kevin De Bruyne",
+            "salary_eur": 23000000,
+            "weekly_wage_gbp": 375000,
+            "age_at_signing": 31,
+            "club": "Manchester City",
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Virgil van Dijk",
+      "age": 33,
+      "position": "CB",
+      "current_club": "Liverpool",
+      "nationality": "Netherlands",
+      "stats": {
+        "goals": 2,
+        "assists": 2,
+        "appearances": 34,
+        "minutes_played": 3050,
+        "pass_completion_pct": 91.8,
+        "dribbles_per_90": 0.3,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2027",
+        "signed": "2025",
+        "length_years": 2,
+        "weekly_wage_gbp": 300000,
+        "annual_salary_eur": 18000000,
+        "source": "Capology (2025)",
+        "source_url": "https://www.capology.com/"
+      },
+      "market_context": {
+        "predicted_value_eur": 28000000,
+        "transfer_value_source": "Transfermarkt (2025, age-adjusted)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 18000000,
+        "median_eur": 25000000,
+        "p75_eur": 35000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 16000000,
+          "high_eur": 22000000,
+          "basis": "Based on veteran elite centre-backs 30+ (Saliba, Dias, Koulibaly) from Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "William Saliba",
+            "salary_eur": 15000000,
+            "weekly_wage_gbp": 250000,
+            "age_at_signing": 24,
+            "club": "Arsenal",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Ruben Dias",
+            "salary_eur": 11400000,
+            "weekly_wage_gbp": 220000,
+            "age_at_signing": 23,
+            "club": "Manchester City",
+            "year": 2020,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Kalidou Koulibaly",
+            "salary_eur": 10000000,
+            "age_at_signing": 31,
+            "club": "Chelsea",
+            "transfer_fee_eur": 40000000,
+            "year": 2022,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bruno Fernandes",
+      "age": 30,
+      "position": "CAM",
+      "current_club": "Manchester United",
+      "nationality": "Portugal",
+      "stats": {
+        "goals": 10,
+        "assists": 8,
+        "appearances": 36,
+        "minutes_played": 3100,
+        "pass_completion_pct": 82.0,
+        "dribbles_per_90": 1.9,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2028",
+        "signed": "2024",
+        "length_years": 4,
+        "weekly_wage_gbp": 300000,
+        "annual_salary_eur": 16200000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 60000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 40000000,
+        "median_eur": 52000000,
+        "p75_eur": 70000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 15000000,
+          "high_eur": 20000000,
+          "basis": "Based on elite PL attacking mids aged 28-32 (Odegaard, De Bruyne, Modric) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Martin Odegaard",
+            "salary_eur": 14500000,
+            "weekly_wage_gbp": 240000,
+            "age_at_signing": 25,
+            "club": "Arsenal",
+            "year": 2023,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Kevin De Bruyne",
+            "salary_eur": 23000000,
+            "weekly_wage_gbp": 375000,
+            "age_at_signing": 31,
+            "club": "Manchester City",
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Luka Modric",
+            "salary_eur": 10500000,
+            "age_at_signing": 38,
+            "club": "Real Madrid",
+            "year": 2024,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ruben Dias",
+      "age": 27,
+      "position": "CB",
+      "current_club": "Manchester City",
+      "nationality": "Portugal",
+      "stats": {
+        "goals": 1,
+        "assists": 2,
+        "appearances": 32,
+        "minutes_played": 2800,
+        "pass_completion_pct": 93.1,
+        "dribbles_per_90": 0.3,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2027",
+        "signed": "2022",
+        "length_years": 5,
+        "weekly_wage_gbp": 220000,
+        "annual_salary_eur": 11400000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 75000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 55000000,
+        "median_eur": 68000000,
+        "p75_eur": 85000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 12000000,
+          "high_eur": 17000000,
+          "basis": "Based on elite PL centre-backs aged 25-29 (Saliba, Van Dijk, Stones) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "William Saliba",
+            "salary_eur": 15000000,
+            "weekly_wage_gbp": 250000,
+            "age_at_signing": 24,
+            "club": "Arsenal",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Virgil van Dijk",
+            "salary_eur": 18000000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 33,
+            "club": "Liverpool",
+            "year": 2025,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "John Stones",
+            "salary_eur": 12000000,
+            "weekly_wage_gbp": 200000,
+            "age_at_signing": 28,
+            "club": "Manchester City",
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Son Heung-min",
+      "age": 32,
+      "position": "LW",
+      "current_club": "Tottenham",
+      "nationality": "South Korea",
+      "stats": {
+        "goals": 17,
+        "assists": 10,
+        "appearances": 36,
+        "minutes_played": 3000,
+        "pass_completion_pct": 79.5,
+        "dribbles_per_90": 2.3,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2026",
+        "signed": "2023",
+        "length_years": 3,
+        "weekly_wage_gbp": 190000,
+        "annual_salary_eur": 12500000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 35000000,
+        "transfer_value_source": "Transfermarkt (2025, age-adjusted)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 22000000,
+        "median_eur": 30000000,
+        "p75_eur": 42000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 12000000,
+          "high_eur": 18000000,
+          "basis": "Based on veteran elite wingers 30+ (Salah, Mane, Sterling) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Mohamed Salah",
+            "salary_eur": 24200000,
+            "weekly_wage_gbp": 400000,
+            "age_at_signing": 33,
+            "club": "Liverpool",
+            "year": 2025,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/player/_/id/15507/mohamed-salah"
+          },
+          {
+            "name": "Sadio Mane",
+            "salary_eur": 20000000,
+            "age_at_signing": 30,
+            "club": "Bayern Munich",
+            "transfer_fee_eur": 32000000,
+            "year": 2022,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Raheem Sterling",
+            "salary_eur": 18000000,
+            "weekly_wage_gbp": 300000,
+            "age_at_signing": 27,
+            "club": "Chelsea",
+            "transfer_fee_eur": 56000000,
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Jamal Musiala",
+      "age": 22,
+      "position": "CAM",
+      "current_club": "Bayern Munich",
+      "nationality": "Germany",
+      "stats": {
+        "goals": 12,
+        "assists": 8,
+        "appearances": 33,
+        "minutes_played": 2750,
+        "pass_completion_pct": 85.4,
+        "dribbles_per_90": 4.1,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2029",
+        "signed": "2025",
+        "length_years": 4,
+        "annual_salary_eur": 12000000,
+        "source": "Capology (2025)",
+        "source_url": "https://www.capology.com/"
+      },
+      "market_context": {
+        "predicted_value_eur": 150000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 110000000,
+        "median_eur": 135000000,
+        "p75_eur": 165000000,
+        "salary_range": {
+          "low_eur": 10000000,
+          "mid_eur": 15000000,
+          "high_eur": 22000000,
+          "basis": "Based on elite young attacking midfielders aged 20-24 (Bellingham, Wirtz, Pedri) from Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Jude Bellingham",
+            "salary_eur": 20800000,
+            "age_at_signing": 20,
+            "club": "Real Madrid",
+            "transfer_fee_eur": 103000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/jude-bellingham-37196/"
+          },
+          {
+            "name": "Florian Wirtz",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Liverpool",
+            "transfer_fee_eur": 125000000,
+            "year": 2025,
+            "source": "Liverpool.com",
+            "source_url": "https://www.liverpool.com/"
+          },
+          {
+            "name": "Pedri",
+            "salary_eur": 12500000,
+            "age_at_signing": 22,
+            "club": "Barcelona",
+            "year": 2025,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/player/pedri-37585/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Viktor Gyokeres",
+      "age": 26,
+      "position": "ST",
+      "current_club": "Sporting CP",
+      "nationality": "Sweden",
+      "stats": {
+        "goals": 29,
+        "assists": 10,
+        "appearances": 34,
+        "minutes_played": 2900,
+        "pass_completion_pct": 74.8,
+        "dribbles_per_90": 2.6,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2028",
+        "signed": "2023",
+        "length_years": 5,
+        "annual_salary_eur": 4000000,
+        "transfer_fee_expected_eur": "80000000-100000000",
+        "source": "Transfermarkt (2025)",
+        "source_url": "https://www.transfermarkt.us/"
+      },
+      "market_context": {
+        "predicted_value_eur": 70000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 50000000,
+        "median_eur": 65000000,
+        "p75_eur": 85000000,
+        "salary_range": {
+          "low_eur": 6000000,
+          "mid_eur": 10000000,
+          "high_eur": 16000000,
+          "basis": "Based on elite strikers aged 24-28 with big-club move potential (Haaland, Osimhen, Isak) from Transfermarkt/Capology 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Erling Haaland",
+            "salary_eur": 35000000,
+            "weekly_wage_gbp": 525000,
+            "age_at_signing": 22,
+            "club": "Manchester City",
+            "transfer_fee_eur": 60000000,
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          },
+          {
+            "name": "Victor Osimhen",
+            "salary_eur": 12000000,
+            "age_at_signing": 25,
+            "club": "Napoli",
+            "year": 2024,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Alexander Isak",
+            "salary_eur": 10800000,
+            "weekly_wage_gbp": 175000,
+            "age_at_signing": 23,
+            "club": "Newcastle",
+            "transfer_fee_eur": 70000000,
+            "year": 2022,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Alexander Isak",
+      "age": 25,
+      "position": "ST",
+      "current_club": "Newcastle",
+      "nationality": "Sweden",
+      "stats": {
+        "goals": 21,
+        "assists": 3,
+        "appearances": 30,
+        "minutes_played": 2500,
+        "pass_completion_pct": 76.3,
+        "dribbles_per_90": 1.8,
+        "season": "2023-24"
+      },
+      "contract": {
+        "expiry": "2030",
+        "signed": "2024",
+        "length_years": 6,
+        "weekly_wage_gbp": 175000,
+        "annual_salary_eur": 10800000,
+        "source": "Spotrac (2025)",
+        "source_url": "https://www.spotrac.com/epl/"
+      },
+      "market_context": {
+        "predicted_value_eur": 85000000,
+        "transfer_value_source": "Transfermarkt (2025)",
+        "transfer_value_url": "https://www.transfermarkt.us/",
+        "p25_eur": 60000000,
+        "median_eur": 75000000,
+        "p75_eur": 95000000,
+        "salary_range": {
+          "low_eur": 8000000,
+          "mid_eur": 12000000,
+          "high_eur": 18000000,
+          "basis": "Based on elite PL strikers aged 23-27 (Haaland, Kane, Gyokeres) from Spotrac 2024-25 data"
+        },
+        "comparables": [
+          {
+            "name": "Erling Haaland",
+            "salary_eur": 35000000,
+            "weekly_wage_gbp": 525000,
+            "age_at_signing": 24,
+            "club": "Manchester City",
+            "year": 2025,
+            "source": "CBS Sports",
+            "source_url": "https://www.cbssports.com/soccer/news/erling-haaland-manchester-city-contract-details-610000-a-week-wages-release-clauses-removed-in-record-deal/"
+          },
+          {
+            "name": "Harry Kane",
+            "salary_eur": 25000000,
+            "age_at_signing": 30,
+            "club": "Bayern Munich",
+            "transfer_fee_eur": 100000000,
+            "year": 2023,
+            "source": "Capology",
+            "source_url": "https://www.capology.com/"
+          },
+          {
+            "name": "Ollie Watkins",
+            "salary_eur": 7500000,
+            "weekly_wage_gbp": 130000,
+            "age_at_signing": 27,
+            "club": "Aston Villa",
+            "year": 2024,
+            "source": "Spotrac",
+            "source_url": "https://www.spotrac.com/epl/"
+          }
+        ]
+      }
+    }
+  ]
+}

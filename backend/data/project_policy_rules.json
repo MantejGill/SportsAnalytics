@@ -1,0 +1,28 @@
+{
+  "sport": "football",
+  "currency": "EUR",
+  "max_rounds": 10,
+  "allowed_actions": [
+    "propose",
+    "counter",
+    "accept",
+    "reject",
+    "walk_away"
+  ],
+  "market_rules": {
+    "reference_value_field_priority": [
+      "predicted_salary_eur",
+      "predicted_market_value_eur"
+    ],
+    "market_value_lower_multiplier": 0.4,
+    "market_value_upper_multiplier": 1.6
+  },
+  "negotiation_policies": {
+    "team_budget_cap_eur": null,
+    "player_min_salary_eur": null,
+    "team_max_salary_eur": null,
+    "max_sell_on_clause_percent_preferred": 25,
+    "max_performance_bonus_multiple_of_base": 2.0,
+    "max_identical_offer_repeats": 2
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "sport": "football",
+  "governing_body": "FIFA",
+  "official_source": "FIFA RSTP Jan 2025 + FIFA Football Agent Regulations",
+  "contract_rules": {
+    "min_contract_until_end_of_season": true,
+    "max_contract_years_default": 5,
+    "max_contract_years_under_18": 3,
+    "allow_longer_if_national_law_allows": true,
+    "must_notify_current_club_before_negotiation": true,
+    "can_sign_precontract_if_contract_expires_within_months": 6,
+    "cannot_condition_validity_on_medical_exam": true,
+    "cannot_condition_validity_on_work_permit": true,
+    "no_unilateral_termination_during_competition_period": true
+  },
+  "loan_rules": {
+    "written_loan_agreement_required": true,
+    "loan_contract_with_new_club_required": true,
+    "max_loan_duration_years": 1,
+    "subloan_prohibited": true
+  },
+  "minor_rules": {
+    "international_transfer_under_18_prohibited_except_exceptions": true
+  },
+  "agent_fee_rules": {
+    "enabled": true,
+    "individual_fee_pct_if_remuneration_le_200k_usd": 0.05,
+    "individual_fee_pct_if_remuneration_gt_200k_usd": 0.03,
+    "engaging_entity_fee_pct_if_remuneration_le_200k_usd": 0.05,
+    "engaging_entity_fee_pct_if_remuneration_gt_200k_usd": 0.03,
+    "dual_representation_fee_pct_if_remuneration_le_200k_usd": 0.1,
+    "dual_representation_fee_pct_if_remuneration_gt_200k_usd": 0.06,
+    "releasing_entity_transfer_comp_fee_pct": 0.1,
+    "exclude_sell_on_from_transfer_comp_base": true
+  },
+  "notes": {
+    "transfer_windows_defined_by_member_association": true
+  }
+}

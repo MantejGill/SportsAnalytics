@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Build output
+.next/
+dist/
+out/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ML model artifacts (large binary — regenerate via `python -m agents.abdullah_predictor`)
+backend/data/player_valuation_model.joblib
+backend/data/player_valuation_processed.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+*.log
+tsconfig.tsbuildinfo
