@@ -1,4 +1,4 @@
-"""Adapter interfaces for plugging in teammate code (Abdullah's ML model, Smriti's constraint checker)."""
+"""Adapter interfaces for plugging in ML model and constraint checker components."""
 
 import logging
 from abc import ABC, abstractmethod
@@ -8,14 +8,14 @@ logger = logging.getLogger(__name__)
 
 
 class IMarketPredictor(ABC):
-    """Interface for market value prediction. Abdullah's model implements this."""
+    """Interface for market value prediction."""
     @abstractmethod
     def predict(self, player_profile: dict) -> dict:
         """Returns market_context dict with predicted_value_eur, p25_eur, median_eur, p75_eur, salary_range, comparables."""
         ...
 
 class IConstraintChecker(ABC):
-    """Interface for constraint checking. Smriti's checker implements this."""
+    """Interface for constraint checking."""
     @abstractmethod
     def check(self, term_sheet: dict, market_context: dict, rounds: list, current_round: int, club_constraints: dict) -> dict:
         """Returns {valid, violations, warnings, suggested_fix}."""
@@ -35,35 +35,35 @@ class DefaultConstraintChecker(IConstraintChecker):
 
 
 # ---------------------------------------------------------------------------
-# Smriti's constraint checker adapter
+# Advanced constraint checker adapter (6-layer FIFA + project policy)
 # ---------------------------------------------------------------------------
 
-class SmritiConstraintChecker(IConstraintChecker):
-    """Smriti's FIFA + project-policy constraint checker.
+class AdvancedConstraintChecker(IConstraintChecker):
+    """6-layer FIFA + project-policy constraint checker.
 
-    Falls back to the default 4-layer checker if Smriti's code raises an
+    Falls back to the default 4-layer checker if the advanced checker raises an
     unexpected exception.
     """
 
     def check(self, term_sheet, market_context, rounds, current_round, club_constraints) -> dict:
         try:
-            from agents.smriti_constraint_checker import check_constraints_smriti
-            return check_constraints_smriti(
+            from agents.advanced_constraint_checker import check_constraints_advanced
+            return check_constraints_advanced(
                 term_sheet, market_context, rounds, current_round, club_constraints,
             )
         except Exception as exc:
-            logger.warning("SmritiConstraintChecker falling back to default: %s", exc, exc_info=True)
+            logger.warning("AdvancedConstraintChecker falling back to default: %s", exc, exc_info=True)
             return DefaultConstraintChecker().check(
                 term_sheet, market_context, rounds, current_round, club_constraints,
             )
 
 
 # ---------------------------------------------------------------------------
-# Abdullah's ML predictor adapter (re-exported from abdullah_predictor.py)
+# ML market value predictor adapter
 # ---------------------------------------------------------------------------
 
-class AbdullahPredictor(IMarketPredictor):
-    """Abdullah's XGBoost market value predictor.
+class MLPredictor(IMarketPredictor):
+    """XGBoost market value predictor.
 
     Falls back to the default predictor for players not in the CSV or if the
     model file is missing.
@@ -71,14 +71,14 @@ class AbdullahPredictor(IMarketPredictor):
 
     def predict(self, player_profile: dict) -> dict:
         try:
-            from agents.abdullah_predictor import predict_market_value_ml
+            from agents.ml_predictor import predict_market_value_ml
             return predict_market_value_ml(player_profile)
         except Exception as exc:
-            logger.warning("AbdullahPredictor falling back to default: %s", exc)
+            logger.warning("MLPredictor falling back to default: %s", exc)
             return DefaultMarketPredictor().predict(player_profile)
 
 
-# --- Singleton instances (swap these when integrating teammate code) ---
+# --- Singleton instances (swap these when integrating custom components) ---
 _predictor: IMarketPredictor = DefaultMarketPredictor()
 _checker: IConstraintChecker = DefaultConstraintChecker()
 

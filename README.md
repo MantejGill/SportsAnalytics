@@ -33,11 +33,11 @@ Auto-Negotiate combines a **Next.js 14** frontend with a **FastAPI + LangGraph**
   - [Frontend: State Management](#frontend-state-management)
 - [Data Pipeline](#data-pipeline)
   - [Player Database](#player-database)
-  - [Abdullah's ML Predictor](#abdullahs-ml-predictor)
+  - [ML Predictor](#ml-predictor)
   - [Salary Range Methodology](#salary-range-methodology)
   - [Comparable Deal Sourcing](#comparable-deal-sourcing)
 - [Constraint Validation System](#constraint-validation-system)
-  - [Smriti's 6-Layer Constraint Checker](#smritis-6-layer-constraint-checker)
+  - [6-Layer Constraint Checker](#6-layer-constraint-checker)
   - [Default 4-Layer Constraint Checker](#default-4-layer-constraint-checker)
   - [FIFA Rule Coverage](#fifa-rule-coverage)
 - [Validation Metrics](#validation-metrics)
@@ -124,14 +124,14 @@ The system includes a built-in **12-step guided demo tour** that walks through e
 - **Decision Aggregator** — LLM synthesis of all 5 agents into a single coherent recommendation paragraph
 
 ### Market Intelligence
-- **Abdullah's XGBoost ML Model** (R-squared ~0.83) predicting transfer market value from player statistics
+- **XGBoost ML Model** (R-squared ~0.83) predicting transfer market value from player statistics
 - **Curated salary ranges** for 20 elite players (sourced from Spotrac, Capology, Transfermarkt 2024-25)
 - **Position-based fallback** estimates for unknown players with age depreciation factors
 - **Top-tier club filtering** — excludes Saudi Pro League, MLS, Turkish Super Lig from salary comparables
 - **Outlier removal** — comparables >3x median automatically excluded
 
 ### Constraint Validation
-- **Smriti's 6-layer FIFA constraint checker** (schema, official FIFA RSTP rules, project policies, round rules, offer history, side-specific)
+- **6-layer FIFA constraint checker** (schema, official FIFA RSTP rules, project policies, round rules, offer history, side-specific)
 - **Dynamic budget/salary caps** derived per-negotiation from club constraints (not hardcoded)
 - **Stagnation detection** — flags identical repeated offers
 - **Action sequencing** — prevents actions after accept/walk-away
@@ -198,10 +198,10 @@ The system includes a built-in **12-step guided demo tour** that walks through e
 │  │  Adapters    │  │    War Room        │  │  LLM Agents      │  │
 │  │  (Interface) │  │  (5 Specialists)   │  │  (Club/Player)   │  │
 │  │             │  │                    │  │                  │  │
-│  │ Abdullah ML ◄──┤  Comparables       │  │  GPT-4o-mini     │  │
-│  │ Predictor   │  │  Offer Analyzer    │  │  Structured Out   │  │
+│  │ ML Predictor ◄──┤  Comparables       │  │  GPT-4o-mini     │  │
+│  │             │  │  Offer Analyzer    │  │  Structured Out   │  │
 │  │             │  │  Clause & Risk     │  │  Few-shot Prompts │  │
-│  │ Smriti      │  │  Strategy Advisor  │  │                  │  │
+│  │ Advanced    │  │  Strategy Advisor  │  │                  │  │
 │  │ Constraint  │  │  Fact-Checker      │  │                  │  │
 │  │ Checker     │  │  Decision Agg.     │  │                  │  │
 │  └─────────────┘  └────────────────────┘  └──────────────────┘  │
@@ -246,7 +246,7 @@ The War Room is perspective-aware — when the user plays as the Player's Agent,
 
 ### Adapter Pattern for Team Integration
 
-Team members' contributions (Abdullah's ML model, Smriti's constraint checker) are integrated via an **adapter pattern** that provides clean interfaces with safe fallbacks:
+ML and constraint checking components are integrated via an **adapter pattern** that provides clean interfaces with safe fallbacks:
 
 ```python
 class IMarketPredictor(ABC):
@@ -256,11 +256,11 @@ class IConstraintChecker(ABC):
     def check(self, term_sheet, market_context, rounds, current_round, club_constraints) -> dict: ...
 
 # Swap implementations at startup:
-set_predictor(AbdullahPredictor())   # Falls back to DefaultMarketPredictor on error
-set_checker(SmritiConstraintChecker()) # Falls back to DefaultConstraintChecker on error
+set_predictor(MLPredictor())          # Falls back to DefaultMarketPredictor on error
+set_checker(AdvancedConstraintChecker()) # Falls back to DefaultConstraintChecker on error
 ```
 
-This means if Abdullah's model file is missing or Smriti's checker throws an unexpected exception, the system gracefully falls back to built-in defaults without crashing.
+If the ML model file is missing or the advanced checker raises an unexpected exception, the system gracefully falls back to built-in defaults without crashing.
 
 ---
 
@@ -304,8 +304,8 @@ sports-analytics/
 │   │
 │   ├── agents/
 │   │   ├── adapters.py             # IMarketPredictor / IConstraintChecker ABCs
-│   │   ├── abdullah_predictor.py   # XGBoost ML model (Abdullah)
-│   │   ├── smriti_constraint_checker.py  # 6-layer FIFA checker (Smriti)
+│   │   ├── ml_predictor.py         # XGBoost ML model for market value prediction
+│   │   ├── advanced_constraint_checker.py  # 6-layer FIFA + policy checker
 │   │   ├── constraint_checker.py   # Default 4-layer constraint checker
 │   │   ├── market_predictor.py     # Default predictor (sample_players.json)
 │   │   ├── club_agent.py           # AI Club GM (GPT-4o-mini)
@@ -432,11 +432,11 @@ pip install -r requirements.txt
 python -m orchestrator.main
 # → Runs on http://localhost:8100
 # → You should see:
-#   "Activated Smriti's constraint checker"
-#   "Activated Abdullah's ML predictor"
+#   "Activated the advanced constraint checker"
+#   "Activated ML market predictor"
 ```
 
-**Note on Abdullah's ML model:** The XGBoost model file (`player_valuation_model.joblib`, ~2MB) and its training data (`player_valuation_processed.csv`, ~108MB) are **not included in the repo** (too large for git). The system works perfectly without them — it falls back to curated market data from `sample_players.json` for all 20 supported players. If you want to use the ML model:
+**Note on the ML model:** The XGBoost model file (`player_valuation_model.joblib`, ~2MB) and its training data (`player_valuation_processed.csv`, ~108MB) are **not included in the repo** (too large for git). The system works perfectly without them — it falls back to curated market data from `sample_players.json` for all 20 supported players. If you want to use the ML model:
 
 ```bash
 # Place the training CSV in backend/data/player_valuation_processed.csv
@@ -496,7 +496,7 @@ For players not in this list, the system uses position-based estimates.
 
 #### `abdullah_predictor.py` — XGBoost Market Value Predictor
 
-Abdullah's ML model predicts a player's transfer market value using an XGBoost regressor trained on historical player valuation data.
+the ML model predicts a player's transfer market value using an XGBoost regressor trained on historical player valuation data.
 
 **How it works:**
 1. Loads `player_valuation_processed.csv` — historical snapshots of player stats + market values
@@ -512,7 +512,7 @@ Abdullah's ML model predicts a player's transfer market value using an XGBoost r
 
 #### `smriti_constraint_checker.py` — 6-Layer FIFA Constraint Checker
 
-Smriti's constraint checker validates term sheets against FIFA regulations, project policies, and negotiation rules. It runs 6 validation layers:
+the advanced constraint checker validates term sheets against FIFA regulations, project policies, and negotiation rules. It runs 6 validation layers:
 
 | Layer | Name | Checks |
 |-------|------|--------|
@@ -524,9 +524,9 @@ Smriti's constraint checker validates term sheets against FIFA regulations, proj
 | 6 | **Side-Specific** | Player-side guarantee checks |
 
 **Integration notes:**
-- The wrapper (`check_constraints_smriti`) translates between our TermSheet format and Smriti's offer/round_state format
+- The wrapper (`check_constraints_advanced`) translates between our TermSheet format and the checker's offer/round_state format
 - Dynamic budget/salary caps are injected per-negotiation from `club_constraints.budget_eur` — not hardcoded
-- Actions are lowercased before validation (our pipeline uses uppercase, Smriti's validators use lowercase)
+- Actions are lowercased before validation (our pipeline uses uppercase, the constraint validators use lowercase)
 - `performance_bonus_eur` is treated as an annual figure (multiplied by contract years for total value computation)
 - `release_clause_eur = 0` (no release clause) is not flagged as an error — only validated when > 0
 - Deep copy prevents cross-session state leakage in the rule cache
@@ -673,7 +673,7 @@ Each entry includes:
 - **Contract**: expiry, signed date, annual salary, weekly wage (with source URLs)
 - **Market Context**: predicted transfer value, salary range (low/mid/high with methodology), 3-4 comparable deals with citations
 
-### Abdullah's ML Predictor
+### ML Predictor
 
 **Model**: XGBoost Regressor
 - 500 estimators, learning rate 0.05, max depth 6
@@ -725,9 +725,9 @@ Each comparable includes: player name, annual salary (EUR), club, year, age at s
 
 ## Constraint Validation System
 
-### Smriti's 6-Layer Constraint Checker
+### 6-Layer Constraint Checker
 
-Ported from Smriti's Jupyter notebook (`constraint_checker_final.ipynb`) into a production-ready Python module.
+Ported from the original Jupyter notebook (`constraint_checker_final.ipynb`) into a production-ready Python module.
 
 **Layer 1 — Schema Validation:**
 - Required fields: player_name, club_name, base_salary_eur, contract_years, guaranteed_amount_eur
@@ -776,15 +776,15 @@ A simpler built-in checker used as fallback:
 | Rule | Source | Enforced By |
 |------|--------|-------------|
 | Max contract 5 years | FIFA RSTP Art. 18.2 | Both checkers |
-| Max contract 3 years (U-18) | FIFA RSTP Art. 18.2 | Smriti |
-| Pre-contract 6-month window | FIFA RSTP Art. 18.3 | Smriti |
-| No medical exam condition | FIFA RSTP Art. 18.4 | Smriti |
-| No work permit condition | FIFA RSTP Art. 18.4 | Smriti |
-| No unilateral termination in season | FIFA RSTP Art. 14.1 | Smriti |
-| Minor international transfer ban | FIFA RSTP Art. 19 | Smriti |
-| Max loan 1 year | FIFA RSTP Art. 10.3 | Smriti |
-| Sub-loan prohibited | FIFA RSTP Art. 10.3 | Smriti |
-| Agent fee caps | FIFA Football Agent Regs | Smriti |
+| Max contract 3 years (U-18) | FIFA RSTP Art. 18.2 | Advanced Checker |
+| Pre-contract 6-month window | FIFA RSTP Art. 18.3 | Advanced Checker |
+| No medical exam condition | FIFA RSTP Art. 18.4 | Advanced Checker |
+| No work permit condition | FIFA RSTP Art. 18.4 | Advanced Checker |
+| No unilateral termination in season | FIFA RSTP Art. 14.1 | Advanced Checker |
+| Minor international transfer ban | FIFA RSTP Art. 19 | Advanced Checker |
+| Max loan 1 year | FIFA RSTP Art. 10.3 | Advanced Checker |
+| Sub-loan prohibited | FIFA RSTP Art. 10.3 | Advanced Checker |
+| Agent fee caps | FIFA Football Agent Regs | Advanced Checker |
 | Image rights ≤ 50% | Industry standard | Default |
 | Salary non-negative | Common sense | Both |
 
@@ -850,8 +850,8 @@ The system has been validated with 13 edge case test suites covering 70+ individ
 
 | Suite | Tests | Coverage |
 |-------|-------|----------|
-| Abdullah Predictor Boundaries | 6 | Empty names, case sensitivity, whitespace, unknown players, key mismatches |
-| Smriti Constraint Stress | 8 | Zero/negative salary, FIFA limits, round boundaries, null contexts |
+| ML Predictor Boundaries | 6 | Empty names, case sensitivity, whitespace, unknown players, key mismatches |
+| Advanced Constraint Stress | 8 | Zero/negative salary, FIFA limits, round boundaries, null contexts |
 | Offer History & Stagnation | 5 | Identical offers, action after accept/walk_away, budget boundaries |
 | War Room Comparables Filtering | 6 | Unknown players, non-top-tier exclusion, self-reference, age filter, outlier removal |
 | Strategy Advisor Walk-Away | 4 | Walk-away detection, market-derived fallback, counter floor enforcement |
@@ -865,10 +865,10 @@ The system has been validated with 13 edge case test suites covering 70+ individ
 | Multi-Round Full Negotiation | 1 | Bellingham 6-round negotiation to completion with all metrics |
 
 **Key validations:**
-- Abdullah's ML model returns EUR 86M for Saka (vs Transfermarkt EUR 130M static value)
+- the ML model returns EUR 86M for Saka (vs Transfermarkt EUR 130M static value)
 - Salary ranges are curated (Saka: EUR 10M/15M/20M) matching real-world data (actual: EUR 18.2M)
 - Comparables exclude Saudi/MLS/Turkish league clubs
-- Smriti's checker catches action-after-accept, stagnation, FIFA violations
+- the advanced checker catches action-after-accept, stagnation, FIFA violations
 - Dynamic budget caps don't leak between concurrent negotiations
 - Full 6-round negotiation terminates with 100% market realism and 100% compliance
 
@@ -878,13 +878,9 @@ The system has been validated with 13 edge case test suites covering 70+ individ
 
 **CMU 18-738: Sports Technology — Spring 2026**
 
-| Name | Contribution |
-|------|-------------|
-| **Mantej Gill** | Negotiation loop, UI/frontend, system integration, War Room, testing |
-| **Abdullah** | XGBoost ML player valuation predictor (R² ~0.83) |
-| **Smriti** | 6-layer FIFA constraint checker (RSTP 2025 compliance) |
-| **Madhavi** | Integration support |
-| **Vishal** | Negotiation loop support |
+Developed as a capstone project combining ML-powered market valuation, multi-agent LLM negotiation, and 6-layer FIFA constraint validation within a human-in-the-loop CopilotKit interface.
+
+
 
 ---
 

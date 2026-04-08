@@ -79,9 +79,9 @@ export const DEMO_TOUR_STEPS: TourStep[] = [
   },
   {
     target: '[data-tour="constraint-checker"]',
-    title: "4-Layer Constraint Checker",
+    title: "6-Layer Constraint Checker",
     description:
-      "Smriti and Madhavi's constraint system validates every offer through 4 layers:\n• Layer 0: Format (JSON schema)\n• Layer 1: Contract Sanity (years, values)\n• Layer 2: Market Realism (salary band)\n• Layer 3: Protocol (no repeats, turn order)\n100% compliance means all offers passed.",
+      "The advanced constraint system validates every offer through 6 layers:\n• Layer 0: Format (JSON schema)\n• Layer 1: Contract Sanity (years, values)\n• Layer 2: Market Realism (salary band)\n• Layer 3: Protocol (no repeats, turn order)\n• Layer 4: FIFA RSTP rules\n• Layer 5: Side-specific rules\n100% compliance means all offers passed.",
     placement: "left",
   },
   {
@@ -95,7 +95,7 @@ export const DEMO_TOUR_STEPS: TourStep[] = [
     target: '[data-tour="app-header"]',
     title: "Demo Complete!",
     description:
-      "This was Auto-Negotiate — combining ML salary prediction (Abdullah), constraint-aware deal optimization (Smriti & Madhavi), and multi-agent negotiation (Mantej/Vishal) into a unified CopilotKit interface. 20 real players, cited market data, and human-in-the-loop control.",
+      "This was Auto-Negotiate — combining XGBoost ML salary prediction, 6-layer FIFA constraint validation, and multi-agent negotiation into a unified CopilotKit interface. 20 real players, cited market data, and human-in-the-loop control.",
     placement: "bottom",
   },
 ];

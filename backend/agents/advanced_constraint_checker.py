@@ -700,7 +700,7 @@ def validate_round_and_offer(
 # ---------------------------------------------------------------------------
 
 
-def check_constraints_smriti(
+def check_constraints_advanced(
     term_sheet: dict,
     market_context: dict | None,
     rounds: list[dict],

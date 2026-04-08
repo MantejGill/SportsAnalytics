@@ -24,22 +24,22 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Swap in teammate implementations (with safe fallbacks)
+# Activate advanced implementations (with safe fallbacks to defaults)
 # ---------------------------------------------------------------------------
 
-from agents.adapters import set_checker, set_predictor, SmritiConstraintChecker, AbdullahPredictor
+from agents.adapters import set_checker, set_predictor, AdvancedConstraintChecker, MLPredictor
 
 try:
-    set_checker(SmritiConstraintChecker())
-    logger.info("Activated Smriti's constraint checker")
+    set_checker(AdvancedConstraintChecker())
+    logger.info("Activated advanced constraint checker")
 except Exception as exc:
-    logger.warning("Failed to activate Smriti's constraint checker, using default: %s", exc)
+    logger.warning("Failed to activate advanced constraint checker, using default: %s", exc)
 
 try:
-    set_predictor(AbdullahPredictor())
-    logger.info("Activated Abdullah's ML predictor")
+    set_predictor(MLPredictor())
+    logger.info("Activated ML market predictor")
 except Exception as exc:
-    logger.warning("Failed to activate Abdullah's predictor, using default: %s", exc)
+    logger.warning("Failed to activate ML predictor, using default: %s", exc)
 
 # ---------------------------------------------------------------------------
 # App
