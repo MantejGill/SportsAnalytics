@@ -50,12 +50,44 @@ Auto-Negotiate combines a **Next.js 14** frontend with a **FastAPI + LangGraph**
 
 ## Demo
 
-> Add screenshots to `docs/screenshots/` and reference them here.
+### Animated Demo
 
-<!-- ![Side Selection](docs/screenshots/side-selector.png) -->
-<!-- ![Negotiation Dashboard](docs/screenshots/dashboard.png) -->
-<!-- ![War Room Analysis](docs/screenshots/war-room.png) -->
-<!-- ![Deal Accepted](docs/screenshots/deal-accepted.png) -->
+![Auto-Negotiate Demo](docs/screenshots/auto_negotiate_demo.gif)
+
+### Screenshots
+
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="docs/screenshots/01_landing.png" alt="Side Selection Screen" /><br/>
+<em>Choose your side — Club GM or Player Agent</em>
+</td>
+<td align="center" width="50%">
+<img src="docs/screenshots/06_war_room_analysis.png" alt="War Room Analysis" /><br/>
+<em>5-agent War Room analysis of the incoming offer</em>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<img src="docs/screenshots/07_decision_panel.png" alt="Decision Panel" /><br/>
+<em>Decision panel — Accept, Counter, or Walk Away</em>
+</td>
+<td align="center" width="50%">
+<img src="docs/screenshots/10_term_sheet.png" alt="Term Sheet" /><br/>
+<em>Live term sheet with full contract breakdown</em>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<img src="docs/screenshots/08_metrics_panel.png" alt="Metrics Panel" /><br/>
+<em>Validation metrics — Market Realism, Compliance, Rounds</em>
+</td>
+<td align="center" width="50%">
+<img src="docs/screenshots/11_full_layout_timeline.png" alt="Full Layout with Timeline" /><br/>
+<em>Full layout — War Room + Offer Timeline side-by-side</em>
+</td>
+</tr>
+</table>
 
 The system includes a built-in **12-step guided demo tour** that walks through every feature:
 
