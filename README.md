@@ -354,61 +354,107 @@ sports-analytics/
 
 ### Prerequisites
 
-- **Node.js** >= 18
-- **Python** >= 3.10
-- **OpenAI API Key** (GPT-4o-mini)
+- **Node.js** >= 18 ([install](https://nodejs.org/))
+- **Python** >= 3.10 ([install](https://www.python.org/downloads/))
+- **OpenAI API Key** — you need a key with access to `gpt-4o-mini` ([get one here](https://platform.openai.com/api-keys))
 
-### Backend Setup
+### Step 1: Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd sports-analytics
+```
+
+### Step 2: Set Up Environment Variables
+
+```bash
+# Root .env (used by the backend)
+cp .env.example .env
+# Edit .env — replace sk-your-key-here with your real OpenAI API key:
+#   OPENAI_API_KEY=sk-proj-...
+#   BACKEND_URL=http://localhost:8100
+
+# Frontend .env.local (used by Next.js)
+cp frontend/.env.example frontend/.env.local
+# Edit frontend/.env.local — same API key:
+#   OPENAI_API_KEY=sk-proj-...
+#   BACKEND_URL=http://localhost:8100
+```
+
+> **Both files need the same `OPENAI_API_KEY`.** The backend uses it for the Club/Player LLM agents and War Room analysis. The frontend uses it for the CopilotKit chat sidebar.
+
+### Step 3: Backend Setup
 
 ```bash
 cd backend
 
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# .venv\Scripts\activate   # Windows
+# Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate   # macOS / Linux
+# .venv\Scripts\activate    # Windows
 
-# Install dependencies
+# Install all Python dependencies
 pip install -r requirements.txt
 
-# Set environment variables
-cp ../.env.example ../.env
-# Edit ../.env and add your OPENAI_API_KEY
-
-# (Optional) Train Abdullah's ML model from scratch:
-# python -m agents.abdullah_predictor
-# This requires data/player_valuation_processed.csv (~108MB, not in repo)
-# The system works without it — falls back to sample_players.json data
-
-# Start the backend
+# Start the backend server
 python -m orchestrator.main
 # → Runs on http://localhost:8100
+# → You should see:
+#   "Activated Smriti's constraint checker"
+#   "Activated Abdullah's ML predictor"
 ```
 
-### Frontend Setup
+**Note on Abdullah's ML model:** The XGBoost model file (`player_valuation_model.joblib`, ~2MB) and its training data (`player_valuation_processed.csv`, ~108MB) are **not included in the repo** (too large for git). The system works perfectly without them — it falls back to curated market data from `sample_players.json` for all 20 supported players. If you want to use the ML model:
+
+```bash
+# Place the training CSV in backend/data/player_valuation_processed.csv
+# Then train the model:
+python -m agents.abdullah_predictor
+# → Creates backend/data/player_valuation_model.joblib
+# → Next server restart will use the ML model automatically
+```
+
+### Step 4: Frontend Setup
+
+Open a **new terminal** (keep the backend running):
 
 ```bash
 cd frontend
 
-# Install dependencies
+# Install Node.js dependencies
 npm install
 
-# Set environment variables
-cp .env.example .env.local
-# Edit .env.local: set OPENAI_API_KEY and BACKEND_URL=http://localhost:8100
-
-# Start the dev server
+# Start the Next.js dev server
 npm run dev
 # → Runs on http://localhost:3000
 ```
 
-### Running the Full System
+### Step 5: Use the App
 
-1. Start the backend: `cd backend && python -m orchestrator.main`
-2. Start the frontend: `cd frontend && npm run dev`
-3. Open http://localhost:3000
-4. Click "Start Demo Tour" for a guided walkthrough, or type in the chat:
+1. Open **http://localhost:3000** in your browser
+2. Click **"Start Demo Tour"** for a guided walkthrough of every feature
+3. Or type in the chat sidebar:
    > "I'm Bukayo Saka's agent. Arsenal wants to sign me. My minimum is 10M EUR per year."
+4. Watch the AI opponent make an offer, the War Room analyze it, and then decide: accept, counter, or walk away
+
+### Supported Players (for demo)
+
+The system has curated market data for 20 elite players. You can negotiate for any of them by name:
+
+> Bukayo Saka, Erling Haaland, Pedri, Kylian Mbappe, Mohamed Salah, Jude Bellingham, Lamine Yamal, Declan Rice, Florian Wirtz, Cole Palmer, William Saliba, Rodri, Martin Odegaard, Virgil van Dijk, Bruno Fernandes, Ruben Dias, Son Heung-min, Jamal Musiala, Viktor Gyokeres, Alexander Isak
+
+For players not in this list, the system uses position-based estimates.
+
+### Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Backend: `ModuleNotFoundError` | Make sure you activated the venv: `source .venv/bin/activate` |
+| Backend: `OPENAI_API_KEY` empty | Check that `.env` exists in the project root (not in `backend/`) |
+| Frontend: Chat not responding | Check that `frontend/.env.local` has the API key |
+| Frontend: "Backend error" toast | Make sure the backend is running on port 8100 |
+| SSE not connecting | The frontend connects directly to `localhost:8100` — make sure no firewall blocks it |
+| `Address already in use :8100` | Kill the old process: `lsof -ti:8100 \| xargs kill -9` |
 
 ---
 
