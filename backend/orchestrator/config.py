@@ -17,7 +17,7 @@ class Settings:
     ]
 
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
-    OPENAI_MODEL: str = "gpt-4o-mini"
+    OPENAI_MODEL: str = "gpt-4o"
 
     MAX_NEGOTIATION_ROUNDS: int = 8
     AGENT_TIMEOUT: int = 60  # seconds per agent call

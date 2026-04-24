@@ -8,6 +8,30 @@ Auto-Negotiate combines a **Next.js 14** frontend with a **FastAPI + LangGraph**
 
 ---
 
+## Evaluation Results
+
+We ran 300 fully automated negotiations (100 per condition) comparing the multi-agent system against a Vanilla ChatGPT baseline. Results are comprehensively documented in:
+
+**[RESULTS.md](RESULTS.md) -- Full evaluation report with 10 figures, statistical tests, and three-way comparison**
+
+### Quick Summary (Auto-Negotiate mini vs Vanilla ChatGPT)
+
+| Metric | Auto-Negotiate | Vanilla ChatGPT | Winner |
+|--------|---------------|-----------------|--------|
+| Market Alignment (judge) | **9.38 / 10** | 8.69 / 10 | Auto-Negotiate (p=0.002) |
+| Contract Structure (judge) | 5.73 / 10 | **7.27 / 10** | Vanilla (p<0.001) |
+| Club Outcome Quality | **19.9 / 100** | 12.4 / 100 | Auto-Negotiate (p=0.015) |
+| Player Outcome Quality | 43.7 / 100 | **55.1 / 100** | Vanilla (p<0.001) |
+| Overall Judge Score | 6.89 / 10 | **7.47 / 10** | Vanilla (p=0.002) |
+| Final Salary | EUR 16.56M | EUR 16.58M | Tie (p=0.985) |
+| Outcome Diversity | ACCEPTED/MAX/WALK | ACCEPTED only | Auto-Negotiate |
+
+**Key insight:** All three systems converge to the same final salary (~EUR 16.57M). Architecture and model choice determine process quality, not the negotiated number. Auto-Negotiate wins on market constraint enforcement; Vanilla wins on contract structure coherence.
+
+For figures, statistical tests, budget tier breakdowns, position analysis, and the LaTeX table for the paper, see **[RESULTS.md](RESULTS.md)**.
+
+---
+
 ## Table of Contents
 
 - [Demo](#demo)
