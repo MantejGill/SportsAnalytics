@@ -246,6 +246,9 @@ async def stream_events(request_id: str) -> EventSourceResponse:
     async def event_generator():
         queue: asyncio.Queue = entry["queue"]
 
+        # Send an immediate comment to flush headers through proxies/CDNs
+        yield {"event": "connected", "data": json.dumps({"status": entry["status"]})}
+
         # Replay past events
         for evt in list(entry["events"]):
             yield {"event": evt.get("type", "message"),
@@ -261,7 +264,7 @@ async def stream_events(request_id: str) -> EventSourceResponse:
         # Stream live events
         while True:
             try:
-                event = await asyncio.wait_for(queue.get(), timeout=60)
+                event = await asyncio.wait_for(queue.get(), timeout=10)
             except asyncio.TimeoutError:
                 # Send keepalive
                 yield {"event": "keepalive", "data": json.dumps({"status": entry["status"]})}
@@ -272,7 +275,14 @@ async def stream_events(request_id: str) -> EventSourceResponse:
             yield {"event": event.get("type", "message"),
                    "data": json.dumps(event.get("data", event))}
 
-    return EventSourceResponse(event_generator())
+    return EventSourceResponse(
+        event_generator(),
+        headers={
+            "X-Accel-Buffering": "no",
+            "Cache-Control": "no-cache, no-transform",
+        },
+        ping=10,   # send keepalive comment every 10s (prevents proxy timeouts)
+    )
 
 
 @router.post("/decide/{request_id}", response_model=DecideResponse)

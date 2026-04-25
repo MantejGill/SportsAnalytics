@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: auto-negotiate-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m orchestrator.main
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # you paste this manually in the Render dashboard
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /
