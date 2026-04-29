@@ -378,9 +378,11 @@ export default function HomePage() {
 
       const data = await response.json();
       const requestId = data.request_id;
+      console.log("[handleStart] backend returned request_id:", requestId);
 
       startNeg(requestId);
       connect(requestId);
+      console.log("[handleStart] startNeg + connect called for:", requestId);
 
       toast.success(
         "Negotiation started! The AI opponent will make the first move."

@@ -126,6 +126,7 @@ export function useNegotiationEvents() {
       disconnect();
       setConnected(true);
       addLog("Polling connected");
+      console.log("[Poll] connecting to request_id:", requestId);
 
       const backendBase = process.env.NEXT_PUBLIC_BACKEND_URL || "";
       // Use Next.js rewrite proxy (/api/backend/*) when no explicit backend URL,
@@ -134,6 +135,7 @@ export function useNegotiationEvents() {
         ? `${backendBase}/api/negotiation/${requestId}`
         : `/api/backend/negotiation/${requestId}`;
 
+      console.log("[Poll] stateUrl:", stateUrl);
       pollerRef.current = setInterval(async () => {
         try {
           const res = await fetch(stateUrl);

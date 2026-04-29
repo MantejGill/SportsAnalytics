@@ -6,6 +6,8 @@ import {
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 
+export const maxDuration = 60;
+
 const runtime = new CopilotRuntime();
 
 export const POST = async (req: NextRequest) => {
